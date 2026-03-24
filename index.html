@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>BODMAS Premium Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>🎮 BODMAS Premium Game</h1>
+
+        <div class="top-bar">
+            <div id="score">Score: 0</div>
+            <div id="timer">Time: 10</div>
+        </div>
+
+        <div class="levels">
+            <button onclick="setLevel('easy')">Easy</button>
+            <button onclick="setLevel('medium')">Medium</button>
+            <button onclick="setLevel('hard')">Hard</button>
+        </div>
+
+        <div class="progress-bar">
+            <div id="progress"></div>
+        </div>
+
+        <h2 id="question"></h2>
+        <p>Select operation to solve first:</p>
+
+        <div id="options"></div>
+
+        <p id="result"></p>
+        <p id="explanation"></p>
+
+        <button onclick="nextQuestion()">Next</button>
+
+        <div id="gameOver" class="hidden">
+            <h2>🏆 Game Over!</h2>
+            <p id="finalScore"></p>
+            <button onclick="restartGame()">🔄 Restart Game</button>
+        </div>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="correctSound" src="sounds/correct ans.wav"></audio>
+    <audio id="wrongSound" src="sounds/wrong ans.wav"></audio>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script src="script.js"></script>
+    <div id="particles-js"></div>
+</body>
+
+</html>
