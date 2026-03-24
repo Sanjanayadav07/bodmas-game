@@ -5,7 +5,7 @@ An interactive web-based game designed to teach and reinforce the **BODMAS rule 
 ---
 
 ## 🚀 Live Demo
-👉 https://your-username.github.io/bodmas-game
+👉 https://bodmas-game-nu.vercel.app/
 
 ---
 
@@ -66,10 +66,7 @@ git clone https://github.com/your-username/bodmas-game.git
 ```
 - Open folder
 - Run index.html in browser
----
-## 📸 Demo
 
-👉 (Add your Loom video link here)
 ---
 
 ## 💡 Future Improvements
