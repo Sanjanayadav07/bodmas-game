@@ -9,6 +9,9 @@
 
 <body>
 
+    <!-- PARTICLES BACKGROUND -->
+    <div id="particles-js"></div>
+
     <div class="container">
         <h1>🎮 BODMAS Premium Game</h1>
 
@@ -17,42 +20,58 @@
             <div id="timer">Time: 10</div>
         </div>
 
-        <div class="levels">
-            <button onclick="setLevel('easy')">Easy</button>
-            <button onclick="setLevel('medium')">Medium</button>
-            <button onclick="setLevel('hard')">Hard</button>
+        <!-- START SCREEN -->
+        <div id="startScreen">
+            <h2>Welcome to BODMAS Game 🎯</h2>
+            <p>Click below to start</p>
+            <button onclick="startGame()">▶️ Start Game</button>
         </div>
 
-        <div class="progress-bar">
-            <div id="progress"></div>
+        <!-- GAME AREA -->
+        <div id="gameArea" class="hidden">
+
+            <div class="levels">
+                <button onclick="setLevel('easy')">Easy</button>
+                <button onclick="setLevel('medium')">Medium</button>
+                <button onclick="setLevel('hard')">Hard</button>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress"></div>
+            </div>
+
+            <h2 id="question"></h2>
+            <p>Select operation to solve first:</p>
+
+            <div id="options"></div>
+
+            <p id="result"></p>
+            <p id="explanation"></p>
+
+            <button onclick="nextQuestion()">Next</button>
         </div>
 
-        <h2 id="question"></h2>
-        <p>Select operation to solve first:</p>
-
-        <div id="options"></div>
-
-        <p id="result"></p>
-        <p id="explanation"></p>
-
-        <button onclick="nextQuestion()">Next</button>
-
+        <!-- GAME OVER (OUTSIDE GAME AREA ✅) -->
         <div id="gameOver" class="hidden">
             <h2>🏆 Game Over!</h2>
             <p id="finalScore"></p>
             <button onclick="restartGame()">🔄 Restart Game</button>
         </div>
+
     </div>
 
-    <!-- Sounds -->
+    <!-- SOUND -->
     <audio id="correctSound" src="sounds/correct ans.wav"></audio>
     <audio id="wrongSound" src="sounds/wrong ans.wav"></audio>
 
-    <!-- Confetti -->
+    <!-- CONFETTI -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 
+    <!-- PARTICLES -->
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
     <script src="script.js"></script>
-    <div id="particles-js"></div>
+
 </body>
 
 </html>
